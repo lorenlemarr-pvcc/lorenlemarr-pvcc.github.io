@@ -26,6 +26,9 @@ import datetime
 PR_BORD = 30
 PR_DAPP = 35
 PR_FLU = 48
+PR_LEP = 21
+PR_LYME = 41
+PR_RAB = 25
 
 PR_ALL = 0
 
@@ -81,29 +84,40 @@ def get_dog_data():
         num_chews = input("How many heartworm chews would you like to order?: ")
 
 def perform_dog_calculations():
+    PR_ALL = PR_BORD + PR_DAPP + PR_FLU + PR_LEP + PR_LYME + PR_RAB
 
     if pet_vax_type == 1:
         vax_cost = PR_BORD
         vax_name = "Bordatella"
 
     elif pet_vax_type == 2:
-        vax_cost = PR_BORD
-        vax_name = "Bordatella"
+        vax_cost = PR_DAPP
+        vax_name = "DAPP"
 
     elif pet_vax_type == 3:
-        vax_cost = PR_BORD
-        vax_name = "Bordatella"
+        vax_cost = PR_FLU
+        vax_name = "Influenza"
 
     elif pet_vax_type == 4:
-        vax_cost = PR_BORD
-        vax_name = "Bordatella"
+        vax_cost = PR_LEP
+        vax_name = "Leptospirosis"
 
     elif pet_vax_type == 5:
-        vax_cost = PR_BORD
-        vax_name = "Bordatella"
+        vax_cost = PR_LYME
+        vax_name = "Lyme Diseas"
 
-    else:
-        PR_ALL = PR_BORD + PR_DAPP + PR
+    elif pet_vax_type == 6:
+        vax_cost = PR_RAB
+        vax_name = "Rabies"
+
+    elif pet_vax_type == 7:
+        vax_cost = PR_ALL
+        vax_name = "Full Vaccine Package (includes all vaccines)"
+
+    elif pet_vax_type == 8:
+        vax_cost = 0
+        vax_name = "NONE"
+
 
 def display_dog_results():
     print("DISPLAY DOGS")
