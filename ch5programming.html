@@ -1,0 +1,244 @@
+<html>
+    <head>
+        <title>
+            Chapter 5: Programming Algorithms & Software Testing
+        </title>
+        <style>
+            table{background-color: #E5A3BE; width:700px; border:10px solid; margin:auto}
+            h1{color: #10120F;}
+            h3{color: #10120F;}
+            h4{color: #000000;}
+            body{color: 05092c; background-image: url(grandma.jpg); font-family: Arial, Arial, Helvetica, sans-serif;}
+            li{font-size:1em; color:rgb(226, 43, 202); font-family: Georgia, 'Times New Roman', Times, serif;}
+            a{text-decoration: none; font-weight: bold; font-size: 1.2em;}
+            a:link{color:#6F7441}
+            a:visited{color:#10120F}
+            a:hover{background-color:#E5A3BE}
+            a:active{color:#0066f2}
+        </style>
+    </head>
+    <body>
+        <table style="background-color: #692233; margin:auto;">
+            <tr style="background-color: #692233;">
+                <td><a href="index.html">Home</a></td>
+                <td><a href="https://www.pvcc.edu">PVCC</a></td>
+                <td><a href="https://www.w3schools.com/html/">W3 Schools</a></td>
+                <td><a href="contactus.html">Contact Us</a></td>            
+            
+            </tr>
+            <tr>
+            <td colspan="4">
+            <h1>
+                Programming Algorithms & Software Testing
+            </h1>
+            <h3>
+                Loren Lemarr
+            </h3>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="4">
+            <table border="1" style="width: auto;">
+            <tr>
+                <th>
+                    TERM
+                </th>   
+                <th>
+                    DEFINITION
+                </th>     
+            </tr>            
+            <tr>
+                <th colspan="4"><h2>Phases of computer program development</h2></th>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 1:</td>
+                <td colspan="3">Understand the problem</td>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 2:</td>
+                <td colspan="3">Design an algorithm to solve the problem</td>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 3:</td>
+                <td colspan="3">Write the program code in appropriate language based on the algorithm</td>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 4:</td>
+                <td colspan="3">Enter the program and save</td>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 5:</td>
+                <td colspan="3">Execute the program</td>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 6:</td>
+                <td colspan="3">Test the program, find errors and debug, then retest</td>
+            </tr>
+            <tr>
+                <td colspan="1">Phase 7:</td>
+                <td colspan="3">Document and evaluate the program</td>
+            </tr>
+            <tr>
+                <th colspan="4"><h2>Programming structures<h2></th>
+            </tr>
+            <tr>
+                <td colspan="1">Sequential structure:</td>
+                <td colspan="3">Top-down execution </td>
+            </tr>
+            <tr>
+                <td colspan="1">Decision structures:</td>
+                <td colspan="3">if/then/else</td>
+            </tr>
+            <th colspan="4"><h3>Iterative (Looping):<h3></th>
+            <tr>
+                <td colspan="1">while loop:</td>
+                <td colspan="3"> continue looping as long as something is true</td>
+            </tr>
+            <tr>
+                <td colspan="1">repeat/until loop:</td>
+                <td colspan="3">continue looping until something is true</td>
+            </tr>
+            <tr>
+                <td colspan="1">for loop:</td>
+                <td colspan="3">loop a given number of times</td>
+            </tr>
+            <th colspan="4"><h3>Recursive structures:<h3></th>
+            <tr>
+                <td colspan="1"> </td>
+                <td colspan="3">Repeat a set of instructions as a subtask of itself</td>
+            </tr>
+            <tr>
+                <td colspan="1">Repitition continues until:</td>
+                <td colspan="3">degenerative case, which is a termination condition, is met (degenerative case is also called a "base case")</td>
+            </tr>
+            <tr>
+                <th colspan="4"><h2>Two classic programming/database problems</h2></th>
+            </tr>
+            <th colspan="4"><h3>Sorting: Descending order/Ascending order<h3></th>
+            <tr>
+                <td colspan="1"> </td>
+                <td colspan="3">Sorting numbers</td>
+            </tr>
+            <tr>
+                <td colspan="1"> </td>
+                <td colspan="3">Sorting strings (in accordance with ASCII values)</td>
+            </tr>
+            <th colspan="4"><h3>Searching: find specific data that meet a certain criteria<h3></th>
+            <tr>
+            <th colspan="4"><h4>In database:<h4></th>
+            </tr>
+            <tr>
+                <td colspan="1">Filters: </td>
+                <td colspan="3">temporary search</td>
+            </tr>
+            <tr>
+                <td colspan="1">Queries:</td>
+                <td colspan="3">serach criteria are saved so they don't have to be recreateds</td>
+            </tr>
+            <th colspan="4"><h3>Two popular search techniques:<h3></th>
+            <tr>
+                <td colspan="1">Sequential search:</td>
+                <td colspan="3">search from top to bottom or bottom to top, one item at a time</td>
+            </tr>
+            <tr>
+                <td colspan="1">Binary search:</td>
+                <td colspan="3">
+                    <ul>
+                        <li>only works if data is SORTED first</li>
+                        <li>start in the middle, then go to half of that, etc.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4"><h3>Two classic programming/database problems</h3></th>
+            </tr>
+            <tr>
+                <td colspan="1">Efficiency:</td>
+                <td colspan="3">Program takes minimal time and/or resources</td>
+            </tr>
+            <tr>
+                <td colspan="1">Correctness:</td>
+                <td colspan="3">Program runs in expected ways and works for all expected conditions</td>
+            </tr>
+            <th colspan="4"><h3>Software testing and verification</h3></th>
+            <th colspan="4"><h4>Kinds of tests:</h4></th>
+            <tr>
+                <td colspan="1">Acceptance testing:</td>
+                <td colspan="3">Verifying whether the whole system works as intended</td>
+            </tr>
+            <tr>
+                <td colspan="1">Integration testing:</td>
+                <td colspan="3">Ensuring that software components or functions operate together</td>
+            </tr>
+            <tr>
+                <td colspan="1">Unit testing:</td>
+                <td colspan="3">Validating that each software unit performs as expected. A unit is the smallest testable component of an application</td>
+            </tr>
+            <tr>
+                <td colspan="1">Functional testing:</td>
+                <td colspan="3">Checking functions by emulating business scenarios, based on functional requirements. Black-box testing is a common way to verify functions</td>
+            </tr>
+            <tr>
+                <td colspan="1">Performance testing:</td>
+                <td colspan="3">Testing how the software performs under different workloads. Load testing, for example, is used to evaluate performance under real-life load conditions</td>
+            </tr>
+            <tr>
+                <td colspan="1">Regression testing:</td>
+                <td colspan="3">Checking whether new features break or degrade functionality. Sanity testing can be used to verify menus, functions and commands at the surface level, when there is no time for a full regression test</td>
+            </tr>
+            <tr>
+                <td colspan="1">Stress testing:</td>
+                <td colspan="3">testing how much strain the system can take before it fails. Considered to be a type of non-functional testing</td>
+            </tr>
+            <tr>
+                <td colspan="1">Usability testing:</td>
+                <td colspan="3">Validating how well a customer can use a system or web application to complete a task</td>
+            </tr>
+            <th colspan="4"><h4>Software testing is done to detect:</h4></th>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="3">Architectural flaws</td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="3">Poor design decisions</td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="3">Invalid or incorrect functionality</td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="3">Security vulnerabilities</td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="3">Scalability issues</td>
+            </tr>
+            <th colspan="4"><h4>Testing best practices:</h4></th>
+            <tr>
+                <td colspan="1">Continuous testing:</td>
+                <td colspan="3">With continuous testing, test activities accompany each build and thus become an integrated part of the devlopment cycle, so that developers have more time to balance cost, quality and risk while speeding up the software delivery.</td>
+            </tr>
+            <tr>
+                <td colspan="1">Configuration management:</td>
+                <td colspan="3">Through the use of user authentication and audit trails, organizations can optimally track and manage their test assets and software builds by giving their teams access to a variety of assets such as: code, requirements, design documents, etc.</td>
+            </tr>
+            <tr>
+                <td colspan="1">Service virtualization:</td>
+                <td colspan="3"> Early on during code development, service virtualization helps simulate testing environments that may not yet be available to teams at that state of production. These help modify configurations for testing scenarios.</td>
+            </tr>
+            <tr>
+                <td colspan="1">Defect or "bug tracking":</td>
+                <td colspan="3">Automated tools help alleviate defects und uncover related issues.</td>
+            </tr>
+            <tr>
+                <td colspan="1">Metrics and reporting:</td>
+                <td colspan="3">These enable teams to better collaborate and share important information concerning the overall health of a project.</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+        </table>
+    </body>
+</html>
