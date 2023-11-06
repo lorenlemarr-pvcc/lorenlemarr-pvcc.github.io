@@ -53,8 +53,9 @@ def get_user_data():
     print("\t3. Large		\t$17.99")
     print("\t4. Extra Large \t\t\t$21.99")
     print("\t5. NONE")
-    pizza_size = int(input("\n* What size pizza(s) would you like to order?: "))
-    num_pizza = int(input("Number of pizzas: "))
+    pizza_size = int(input("\nWhat size pizza(s) would you like to order?: "))
+    if pizza_size != 5:
+        num_pizza = int(input("Number of pizzas: "))
     drink_yesno = input("Would you like to order drinks to do with your pizza for $3.99 each (Y/N)?: ")
     if drink_yesno.upper() == "Y":
         num_drink = int(input("How many drinks would you like to add to your order?: "))
@@ -86,7 +87,7 @@ def display_results():
     print('**** Palermo Pizza *****')
     print('**True Italian Cooking**')
     print('--------------------------------')
-    print('Pizza       	    \t$'+format(cost_pizza, moneyf))
+    print(str(num_pizza)+' Pizza(s)         \t$'+format(cost_pizza, moneyf))
     print('Drinks           \t$'+format(cost_drink, moneyf))
     print('Breadsticks      \t$'+format(cost_bread, moneyf))
     print('Subtotal         \t$'+format(subtotal, moneyf))
