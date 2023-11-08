@@ -1,4 +1,4 @@
-# Name: your-name-here
+# Name: Loren Lemarr
 # Prog Purpose: This program finds the cost of pet vaccines & medications for dogs and cats
 #
 # NOTE: Pet medications prescribed by licensed veterinarians are not subject to sales tax in Virginia
