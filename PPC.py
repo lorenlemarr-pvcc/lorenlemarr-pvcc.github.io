@@ -1,6 +1,6 @@
 #Name: Loren Lemarr
 #Name: Ethan Mallon
-#Prog Purpose: This program finds the cost of ordering from Pslermo Pizza
+#Prog Purpose: This program finds the cost of ordering from Palermo Pizza
 #   Price for Small: $9.99
 #   price for Medium: $12.99
 #   price for Large: $17.99
