@@ -81,7 +81,10 @@ def perform_calculations():
         fed = pay * DED_RATE[0]
         state = pay * DED_RATE[1]
     #STUDENTS: calculate other deductions here:
-        net = pay- fed - state #be sure to subtract the other deductions here
+        social = pay * DED_RATE[2]
+        medi = pay * DED_RATE[3]
+        retire = pay * DED_RATE[4]
+        net = pay- fed - state - social - medi - retire #be sure to subtract the other deductions here
     #add to totals
         total_gross += pay
         total_net += net
@@ -90,7 +93,12 @@ def perform_calculations():
         gross_pay.append(pay)
         fed_tax.append(fed)
         state_tax.append(state)
+        
     #STUDENTS: append other deductions and net pay here:
+        soc_sec.append(social)
+        medicare.append(medi)
+        ret401k.append(retire)
+        net_pay.append(net)
 def display_results():
     currency='8,.2f'
     line = ('--------------------------------------------')
@@ -107,7 +115,7 @@ def display_results():
     print(titles1 + titles2)
     #STUDENTS: Create the missing code to print out employee data, one line at a time
     for i in range(num_emps):
-        datal = emp[i] + "  " + job[i] + format(gross_pay[i], currency)
+        datal = emp[i] + "  " + job[i] + format(gross_pay[i], currency) + "  " + format(fed_tax[i], currency) + "  " + format(state_tax[i], currency) + "  " + format(soc_sec[i], currency) + "  " + format(medicare[i], currency) + "  " + format(ret401k[i], currency)+ "      " + format(net_pay[i], currency)
         print(datal)
     print(line)
     print("*************** TOTAL GROSS: $" + format(total_gross, currency))
