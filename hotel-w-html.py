@@ -19,17 +19,18 @@ TAX_RATE = (.065, .1125)
 ###### NEW LISTS for calculated amounts ##########
 sub_list = []
 total_list = []
-grand_list = []
 sales_tax = []
 occ_tax= []
 ############## LISTS of data ############
-name = []
+cust = []
+lname = []
+fname = []
 room = []
-number = []
+nights = []
 # create output file
 outfile = 'hotelsalesrep.html'
-
-
+# the only imortant variable
+grand = 0
 ######################     define program functions     ######################
 def main():
     read_in_emerald_file()
@@ -54,17 +55,29 @@ def open_outfile():
     
 
 def perform_calculations():
-    global tuition_amount, capital_amt,  institution_fee, student_fee, total, balance
-    if inout == 1:
-        tuition_amount = RATE_TUITION_IN * numcredits
-    else:
-        tuition_amount = RATE_TUITION_OUT * numcredits
-        capital_amt = RATE_CAPITAL_FEE * numcredits
-
-    institution_fee = RATE_INSTITUTION_FEE * numcredits
-    student_fee = RATE_ACTIVITY_FEE * numcredits
-    total = tuition_amount + capital_amt + institution_fee + student_fee
-    balance = total - scholarshipamt
+    global grand
+    grand = 0
+    for i in range(len(cust)):
+        lname.append(cust[i][0])
+        fname.append(cust[i][1])
+        room.append(cust[i][2])
+        nights.append(cust[i][3])
+        if room[i] == "SR":
+            subtotal = int(nights[i])*ROOM_COST[0]
+        elif room[i] == "DR":
+            subtotal = int(nights[i])*ROOM_COST[1]
+        elif room[i] == "SU":
+            subtotal = int(nights[i])*ROOM_COST[2]
+        salestax = subtotal*int(TAX_RATE[0])
+        occtax = subtotal*int(TAX_RATE[1])
+        total = subtotal+salestax+occtax
+        print(total)
+        sub_list.append(subtotal)
+        sales_tax.append(salestax)
+        occ_tax.append(occtax)
+        total_list.append(total)
+        grand += total
+        print(grand)
 def display_results():
     moneyf = '8,.2f'
     today = str(datetime.datetime.now())
