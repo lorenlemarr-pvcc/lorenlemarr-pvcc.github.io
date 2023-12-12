@@ -28,14 +28,15 @@ fname = []
 room = []
 nights = []
 # create output file
-outfile = 'hotelsalesrep.html'
+outfile = 'emerald-web-page.html'
 # the only imortant variable
 grand = 0
 ######################     define program functions     ######################
 def main():
-    read_in_emerald_file()
+    read_in_emerald_file()  
     open_outfile()
     perform_calculations()
+    display_results()
 
 def read_in_emerald_file():
     cust_data = open("emerald.csv","r")
@@ -49,9 +50,9 @@ def read_in_emerald_file():
 def open_outfile():
     global f
     f = open(outfile, 'w')
-    f.write('<html> <head> <title> Emerald Beach Hotels room Costs </title>\n')
+    f.write('<html> <head> <title> Emerald Beach Hotel and Resort</title>\n')
     f.write('<style> td{text-align: right} </style> </head>\n')
-    f.write('<body style ="background-color: #985b45; background-image: url(wp-tuition.png); color: #f8dd61;">\n')
+    f.write('<body style ="background-color: #985b45; background-image: url(beachsunset.jpg); color: #f8dd61; background-size: 100% auto;">\n')
     
 
 def perform_calculations():
@@ -68,10 +69,11 @@ def perform_calculations():
             subtotal = int(nights[i])*ROOM_COST[1]
         elif room[i] == "SU":
             subtotal = int(nights[i])*ROOM_COST[2]
-        salestax = subtotal*int(TAX_RATE[0])
-        occtax = subtotal*int(TAX_RATE[1])
+        salestax = subtotal * TAX_RATE[0]
+        occtax = subtotal*TAX_RATE[1]
+        print(occtax)
         total = subtotal+salestax+occtax
-        print(total)
+        #print(total)
         sub_list.append(subtotal)
         sales_tax.append(salestax)
         occ_tax.append(occtax)
@@ -89,23 +91,21 @@ def display_results():
     sp = " "
 
     f.write('\n<table border="3"   style ="background-color: #47161a;  font-family: arial; margin: auto;">\n')            
-    f.write('<tr><td colspan = 3>\n')
-    f.write('<h2>PVCC</h2></td></tr>')
-    f.write('<tr><td colspan = 3>\n')
-    f.write('*** Costs for enrollment ***\n')
-
-    f.write(tr + 'Tuition amount' + endtd + format(tuition_amount, moneyf) + endtr)
-    f.write(tr + 'Capital fee' + endtd + format(capital_amt, moneyf) + endtr)
-    f.write(tr + 'Institution fee' + endtd + format(institution_fee, moneyf) + endtr)
-    f.write(tr + 'Activity fee' + endtd + format(student_fee, moneyf) + endtr)
-    f.write(tr + 'Total' + endtd + format(total, moneyf) + endtr)
-    f.write(tr + 'Scholarship amount' + endtd + format(scholarshipamt, moneyf) + endtr)
-    f.write(tr + 'Balance' + endtd + format(balance, moneyf) + endtr)
-
-    f.write('<tr><td colspan= "3">Date/Time: ')
+    f.write('<tr><th colspan = 8>\n')
+    f.write('<h2>Emerald Beach Hotel and Resort</h2></th></tr>')
+    f.write('<tr><th colspan= "8">Date/Time: ')
     f.write(day_time)
-    f.write(endtr)
-    f.write('</table>')    
+    f.write("</th><tr>")
+    f.write(tr + "Last Name" + endtd + "First Name" + endtd + "Room TYPE" + endtd + "# Nights" + endtd + "Subtotal" + endtd + "Sales Tax" + endtd + "Occupancy Tax" + endtd + "Total" + endtr)
+    for i in range(len(lname)):
+        f.write(tr + lname[i] + endtd + fname[i] + endtd + room[i] + endtd +nights[i] + endtd + format(sub_list[i], moneyf) + endtd + format(sales_tax[i], moneyf) + endtd + format(occ_tax[i], moneyf) + endtd + format(total_list[i], moneyf) + endtr)
+
+    f.write("<tr><td colspan=6> Grand Total:")
+    f.write("<td colspan=2>"+ format(grand, moneyf) + endtr)
+    f.write('</table>')
+    f.write('</body>\n</html>')
+    f.close()
+    print("ok?")
 ######################      call on main program to execute ######################
 
 main()
